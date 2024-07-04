@@ -1,0 +1,63 @@
+<head>
+<script type="text/javascript" src='https://github.com/visionmedia/move.js'></script>
+</head>
+
+
+<div id="example1">
+<a href="#" class="play">Play</a>
+<div id="box">
+</div>
+
+<script type="text/javascript" src='https://github.com/visionmedia/move.js'>
+
+move('#square')
+        .to(500, 200)
+        .rotate(180)
+        .scale(.5)
+        .set('background-color', '#888')
+        .set('border-color', 'black')
+        .duration('2s')
+        .skew(50, -10)
+        .then()
+          .set('opacity', 0)
+          .duration('0.3s')
+          .scale(.1)
+          .pop()
+        .end(function(){
+          var el = document.getElementById('square');
+          el.style.webkitTransform = 'scale(.5)';
+        });
+</script>
+<style>
+
+#box {
+width: 100px;
+height: 100px;
+border-style: solid;
+}
+
+.image .button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120px;
+    height: 120px;
+    margin:-60px 0 0 -60px;
+	display:inline-block;
+	animation-fill-mode: forwards;
+}
+.button:focus {
+	animation:spin 0.5s linear;
+	
+	animation-name: example;
+}
+
+
+@keyframes example {
+    100% {
+        -webkit-transform: rotate(90deg); 
+        transform:rotate(90deg); 
+    } 
+}
+
+</style>

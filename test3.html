@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Move.js - CSS3 animation framework for JavaScript</title>
+    <style>
+      img {
+	width: 50px;
+	
+	  }
+	  .example {
+	  margin: 100px;
+	  display: inline-block;
+	  }
+	  .box {
+	  display: inline-block;
+	  }
+	  
+    </style>
+  </head>
+  <body>
+
+      <div id="example-4" class="example">
+
+        <a href="#" class="play">
+          <div class="box">
+		  <img src="Asset 1.png" class="box"></div>
+		</a>
+      </div>
+	  
+	  <div id="example-5" class="example">
+
+        <a href="#" class="play">
+          <div class="box">
+		  <img src="Asset 1.png" class="box"></div>
+		</a>
+      </div>
+	  
+	  
+
+
+    <script src="jsfolder/move.js"></script>
+    <script>
+
+      function $(selector) {
+        return document.querySelectorAll(selector)[0];
+      }
+
+      function play(example, fn) {
+        $('#example-' + example + ' .play').addEventListener('click', function(e){
+          e.preventDefault();
+          fn();
+        }, false);
+      }
+
+      // example 4
+      var e4 = move('#example-4 .box');
+      play(4, function(){
+        e4.rotate(45).end();
+      });
+	  
+	  // example 5
+      var e5 = move('#example-5 .box');
+      play(5, function(){
+        e5.rotate(90).end();
+      });
+
+    </script>
+    </div>
+  </body>
+</html>
