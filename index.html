@@ -1,30 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dusan Ralic IV</title>
     <style>
-        .example {
-         
-            
+		@font-face {
+		font-family: HelveticaNeue_Md;
+		src: url(fonts/HelveticaNeueLTPro-Md.otf);
+		}
+		@font-face {
+		font-family: HelveticaNeue_Bd;
+		src: url(fonts/HelveticaNeueLTPro-Bd.otf);
+		}
+		@font-face {
+		font-family: HelveticaNeue_Th;
+		src: url(fonts/HelveticaNeueLTPro-Th.otf);
+		}
+		
+	
+        body {
+			background-color: #161621;
+			font-family: HelveticaNeue_Md;
+			color: white;
         }
         .box {
-
+		height: 200px;
         }
         img.box {
             width: 100%;
         }
 		.flexCont {
+		justify-content: center;
+		background-color: #161621;
 			display: grid;
-			grid-template-columns: 300px 300px;
+			grid-template-columns: 200px 200px 200px 200px 200px;
+		}
+		.text {
+			display: grid;
+			grid-template-columns: 1000px;
+			justify-content: center;
+		}
+		.highlightWord {
+			color: #E1333A;
+		}
+		#potpis {
+			font-size: 14px;
+		}
+		#napomena {
+			font-family: HelveticaNeue_Th;
+		}
+		#naslov {
+			font-family: HelveticaNeue_Bd;
+			font-size: 22px;
+			align: left;
+		}
+		#firstSection {
+			display: grid;
+			grid-template-columns: auto auto;
+			justify-content: ;
+		}
+		button {
+			font-family: HelveticaNeue_Md;
+			padding: 7px 12px 7px 12px;
+			margin-bottom: 10px;
+			
+		}
+		#buttonDiv {
+			display: flex;
+			align-items: center;
+			justify-content: right;
+		}
+		.mainCont {
+			display: grid;
+			grid-template-columns: auto 1000px auto;
+			justify-content: center;
+		}
+		canvas {
+			display: inline;
+		}
+		#dwnImg {
+			width: 100%;
+			text-align:center;
 		}
     </style>
 </head>
 <body>
+<div class="mainCont">
+<div></div>
+<div class="flexCont" id="htmlContent">
 
-<div class="flexCont" id="target">
-    <div id="example-4" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+
+	<div id="example-1" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
         <a href="#" class="play">
             <div class="box">
                 <img src="assets/Asset 1.png" class="box" id="img1">
@@ -32,10 +99,34 @@
         </a>
     </div>
 
+	<div id="example-2" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 2.png" class="box" id="img2">
+            </div>
+        </a>
+    </div>
+
+	<div id="example-3" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 3.png" class="box" id="img3">
+            </div>
+        </a>
+    </div>
+
+    <div id="example-4" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 4.png" class="box" id="img4">
+            </div>
+        </a>
+    </div>
+
     <div id="example-5" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
         <a href="#" class="play">
             <div class="box">
-                <img src="assets/Asset 1.png" class="box" id="img2">
+                <img src="assets/Asset 5.png" class="box" id="img5">
             </div>
         </a>
     </div>
@@ -43,35 +134,178 @@
     <div id="example-6" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
         <a href="#" class="play">
             <div class="box">
-                <img src="assets/Asset 1.png" class="box" id="img3">
+                <img src="assets/Asset 6.png" class="box" id="img6">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-7" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 7.png" class="box" id="img7">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-8" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 8.png" class="box" id="img8">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-9" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 9.png" class="box" id="img9">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-10" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 10.png" class="box" id="img10">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-11" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 11.png" class="box" id="img11">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-12" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 12.png" class="box" id="img12">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-13" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 13.png" class="box" id="img13">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-14" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 14.png" class="box" id="img14">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-15" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 15.png" class="box" id="img15">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-16" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 16.png" class="box" id="img16">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-17" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 17.png" class="box" id="img17">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-18" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 18.png" class="box" id="img18">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-19" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 19.png" class="box" id="img19">
+            </div>
+        </a>
+    </div>
+	
+	<div id="example-20" class="example" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)" ondrop="drop(event)">
+        <a href="#" class="play">
+            <div class="box">
+                <img src="assets/Asset 20.png" class="box" id="img20">
             </div>
         </a>
     </div>
 </div>
+<div></div>
+</div>
+<div hidden id="dwnImg"></div>
+<div class="text">
+<div id="firstSection">
+<p id="naslov">
+Interaktivni Bauhaus
+</p>
+<div id="buttonDiv">
+<button id="change">Sačuvaj</button>
+</div>
+</div>
+<p>
+Inspirisani radovima bauhausa odlučili smo da napravimo interaktivnu sliku u stilu bauhaus. Cilj škole bauhausa bilo je istraživanje novih tehnika, materijala i oblika kroz arhitekturu, nameštaj kao i u svakodnevnim predmetima, te smo tome hteli da dodamo i digitalno svojstvo - <a class="highlightWord">interaktivnost</a>. 
+Napravili smo rad sa oblicima i bojama koje su karakteristične za Bauhaus i ubacili ih na web kao interaktivnu sliku. Svako može da oblike okreće i menja im pozicije i time stvori svoju sliku i kasnije je preuzeti na svoj računar. 
+</p>
+<p>
+Uputstvo: Klikom se blok rotira, a prevlačenjem im se menja mesto. Klikom na dugme "Sačuvaj", pa zatim desnim klikom miša i opcijom "Save image as", moguće je preuzeti kreiranu sliku na računar.
+</p>
+<p id="napomena">
+Napomena: stranica je namenjena za desktop računare i laptopove.
+</p>
+<p align="right" id="potpis">
+Ivana Romić<br>
+Dušan Ralić
+</p>
+</div>
 
-<button onclick="captureAndDownload()" id="download">Click</button>
-<script src="jsfolder/html2canvas.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-<script>
 
-html2canvas(document.body).then(function(canvas) {
-    const img = document.body.appendChild(canvas);
-	img.setAttribute('id', 'testID');
-});
 
-	let canvas = document.getElementById('testID');
-	var dataURL = canvas.toDataURL();
 
-    // Create a dummy link text
-    var a = document.createElement('a');
-    // Set the link to the image so that when clicked, the image begins downloading
-    a.href = dataURL;
-    // Specify the image filename
-    a.download = 'canvas-download.jpeg';
-    // Click on the link to set off download
-    a.click();
-</script>
+
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "jsfolder/html2canvas.js">
+    </script>
+	<script>
+		
+		
+		document.getElementById('change').addEventListener('click', function() {
+		
+		html2canvas(document.getElementById('htmlContent')).then(function(canvas) {
+			document.getElementById('dwnImg').appendChild(canvas);
+		});
+		
+        var htmlContent = document.getElementById('htmlContent');
+        var dwnImg = document.getElementById('dwnImg');
+
+        
+        htmlContent.style.display = 'none';
+        dwnImg.style.display = 'block';
+    });
+		
+	</script>
+
 
     <script>
         function allowDrop(event) {
@@ -134,7 +368,22 @@ html2canvas(document.body).then(function(canvas) {
                 end: function() {}
             };
         }
-
+		
+		var e1 = createRotator(1);
+        play(1, function(){
+            e1.rotate(90).end();
+        });
+		
+		var e2 = createRotator(2);
+        play(2, function(){
+            e2.rotate(90).end();
+        });
+		
+		var e3 = createRotator(3);
+        play(3, function(){
+            e3.rotate(90).end();
+        });
+		
         // example 4
         var e4 = createRotator(4);
         play(4, function(){
@@ -151,6 +400,76 @@ html2canvas(document.body).then(function(canvas) {
         var e6 = createRotator(6);
         play(6, function(){
             e6.rotate(90).end();
+        });
+		
+		var e7 = createRotator(7);
+        play(7, function(){
+            e7.rotate(90).end();
+        });
+		
+		var e8 = createRotator(8);
+        play(8, function(){
+            e8.rotate(90).end();
+        });
+		
+		var e9 = createRotator(9);
+        play(9, function(){
+            e9.rotate(90).end();
+        });
+		
+		var e10 = createRotator(10);
+        play(10, function(){
+            e10.rotate(90).end();
+        });
+		
+		var e11 = createRotator(11);
+        play(11, function(){
+            e11.rotate(90).end();
+        });
+		
+		var e12 = createRotator(12);
+        play(12, function(){
+            e12.rotate(90).end();
+        });
+		
+		var e13 = createRotator(13);
+        play(13, function(){
+            e13.rotate(90).end();
+        });
+		
+		var e14 = createRotator(14);
+        play(14, function(){
+            e14.rotate(90).end();
+        });
+		
+		var e15 = createRotator(15);
+        play(15, function(){
+            e15.rotate(90).end();
+        });
+		
+		var e16 = createRotator(16);
+        play(16, function(){
+            e16.rotate(90).end();
+        });
+		
+		var e17 = createRotator(17);
+        play(17, function(){
+            e17.rotate(90).end();
+        });
+		
+		var e18 = createRotator(18);
+        play(18, function(){
+            e18.rotate(90).end();
+        });
+		
+		var e19 = createRotator(19);
+        play(19, function(){
+            e19.rotate(90).end();
+        });
+		
+		var e20 = createRotator(20);
+        play(20, function(){
+            e20.rotate(90).end();
         });
     </script>
 </body>
